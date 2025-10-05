@@ -5,14 +5,38 @@ export async function getHosts() {
   return res.json();
 }
 
+export async function getCompanies() {
+  const res = await fetch(`${API_URL}/companies`);
+  return res.json();
+}
+
 export async function getVulns(hostId) {
   const res = await fetch(`${API_URL}/hosts/${hostId}/vulns`);
   return res.json();
+}
+
+export async function getVulnsByCompany(companyName) {
+    // URL'deki özel karakterleri (boşluklar gibi) doğru bir şekilde kodlar.
+    const encodedCompanyName = encodeURIComponent(companyName);
+    const res = await fetch(`${API_URL}/companies/${encodedCompanyName}/vulns`);
+    return res.json();
 }
 
 export async function updateVuln(vulnId, status) {
   const res = await fetch(`${API_URL}/vulns/${vulnId}?status=${status}`, {
     method: "PUT",
   });
+  return res.json();
+}
+
+export async function setVulnAction(vulnId, action) {
+  const res = await fetch(`${API_URL}/vulns/${vulnId}/action?action=${action}`, {
+    method: "PUT",
+  });
+  return res.json();
+}
+
+export async function getVulnHistory(vulnId) {
+  const res = await fetch(`${API_URL}/vulns/${vulnId}/history`);
   return res.json();
 }
