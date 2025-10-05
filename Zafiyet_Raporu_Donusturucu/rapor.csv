@@ -1,0 +1,5 @@
+id,host_id,host,company,name,cve,risk,status,action,protocol,port,synopsis,solution
+1,1,host5.example.com,Example Corp,OpenSSH User Enumeration,CVE-2020-14145,High,open,Aksiyon alındı,tcp,22,OpenSSH kullanıcı enumarasyonu mümkün.,OpenSSH sürümünü güncelleyin ve yapılandırmayı sıkılaştırın.
+2,1,host5.example.com,Example Corp,Outdated Apache Version,,Medium,open,,tcp,80,Apache HTTP Server eski sürüm.,Apache’yi desteklenen son sürüme yükseltin.
+3,2,host10.example.com,Other Co,SMB Signing Not Required,CVE-2017-0143,High,open,,tcp,445,SMB imzalama zorunlu değil.,SMB imzalamayı zorunlu yapın.
+4,2,host10.example.com,Other Co,RDP Self-signed Certificate,,Low,open,,tcp,3389,RDP kendinden imzalı sertifika kullanıyor.,Güvenilir CA’dan sertifika kullanın.

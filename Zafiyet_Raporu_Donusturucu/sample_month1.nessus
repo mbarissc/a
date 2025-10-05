@@ -1,0 +1,23 @@
+<NessusClientData_v2>
+  <Report name="January Report">
+    <ReportHost name="10.0.0.5">
+      <HostProperties>
+        <tag name="host-fqdn">host5.example.com</tag>
+        <tag name="operating-system">Ubuntu 20.04 LTS</tag>
+        <tag name="organization">Example Corp</tag>
+      </HostProperties>
+      <ReportItem port="22" protocol="tcp" severity="3" pluginName="OpenSSH User Enumeration">
+        <risk_factor>High</risk_factor>
+        <cve>CVE-2020-14145</cve>
+        <synopsis>SSH service may allow user enumeration</synopsis>
+        <solution>Update OpenSSH</solution>
+      </ReportItem>
+      <ReportItem port="80" protocol="tcp" severity="2" pluginName="Outdated Apache Version">
+        <risk_factor>Medium</risk_factor>
+        <cve>CVE-2019-0211</cve>
+        <synopsis>Apache HTTP Server outdated</synopsis>
+        <solution>Upgrade Apache</solution>
+      </ReportItem>
+    </ReportHost>
+  </Report>
+</NessusClientData_v2>
