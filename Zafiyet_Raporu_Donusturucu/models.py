@@ -31,6 +31,7 @@ class Vulnerability(Base):
     solution = Column(Text)
     status = Column(String(50), default="open")
     action = Column(String(255), default="-")
+    score = Column(Integer, default=0)  # <-- YENİ EKLENEN PUAN ALANI
 
     host = relationship("Host", back_populates="vulnerabilities")
     history = relationship("VulnerabilityHistory", back_populates="vuln", cascade="all, delete")
